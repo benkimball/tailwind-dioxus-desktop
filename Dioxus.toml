@@ -3,7 +3,7 @@
 [web.app]
 
 # HTML title tag content
-title = "minimal-dioxus"
+title = "tailwind-dioxus-desktop"
 
 # include `assets` in web platform
 [web.resource]

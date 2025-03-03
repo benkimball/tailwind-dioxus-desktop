@@ -1,5 +1,5 @@
 [package]
-name = "minimal-dioxus"
+name = "tailwind-dioxus-desktop"
 version = "0.1.0"
 authors = ["Ben Kimball <ben.kimball@xplore.com>"]
 edition = "2021"

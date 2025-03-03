@@ -2596,13 +2596,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "minimal-dioxus"
-version = "0.1.0"
-dependencies = [
- "dioxus",
-]
-
-[[package]]
 name = "miniz_oxide"
 version = "0.8.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4019,6 +4012,13 @@ dependencies = [
  "pkg-config",
  "toml",
  "version-compare",
+]
+
+[[package]]
+name = "tailwind-dioxus-desktop"
+version = "0.1.0"
+dependencies = [
+ "dioxus",
 ]
 
 [[package]]
