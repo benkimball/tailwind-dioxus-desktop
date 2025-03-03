@@ -13,24 +13,28 @@ Just straight from the [getting started](https://dioxuslabs.com/learn/0.6/gettin
 
 Example from [documentation](https://tailwindcss.com/docs/installation) for macOS arm64:
 
-    curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
-    chmod +x tailwindcss-macos-arm64
-    mv tailwindcss-macos-arm64 tailwindcss
+```sh
+curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
+chmod +x tailwindcss-macos-arm64
+mv tailwindcss-macos-arm64 tailwindcss
+```
 
 What I actually did on my x86 Ubuntu machine:
 
-    curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v4.0.9/tailwindcss-linux-arm64
-    mv tailwindcss-linux-arm64 ~/bin/tailwindcss
-    chmod +x ~/bin/tailwindcss
+```sh
+curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v4.0.9/tailwindcss-linux-arm64
+mv tailwindcss-linux-arm64 ~/bin/tailwindcss
+chmod +x ~/bin/tailwindcss
+```
 
 ## Create the project
 
 1. `dx new tailwind-dioxus-desktop`
-  1. Jumpstart
-  1. Fullstack false
-  1. Router true
-  1. Tailwindcss true
-  1. Platform desktop
+    1. Jumpstart
+    1. Fullstack false
+    1. Router true
+    1. Tailwindcss true
+    1. Platform desktop
 1. `cd tailwind-dioxus-desktop`
 1. Replace [input.css](./input.css) (click to view file)
 1. In [tailwind.config.js](./tailwind.config.js), replace `module.exports =` with `export default` (optional)
@@ -43,30 +47,32 @@ What I actually did on my x86 Ubuntu machine:
 
 1. Update [src/main.rs](./src/main.rs) to add a new line 36 with
 
-    document::Link { href: "https://cdn.jsdelivr.net/npm/daisyui@5", rel: "stylesheet", type: "text/css" }
+```rust
+document::Link { href: "https://cdn.jsdelivr.net/npm/daisyui@5", rel: "stylesheet", type: "text/css" }
+```
 
 ## Zed bonus round
 
-1. ^-shift-P, `zed: open project tasks`
+1. `^-shift-P`, select `zed: open project tasks`
 1. Add the tasks:
-    // ...
-      {
-        "label": "Dioxus Serve",
-        "command": "dx serve --platform desktop",
-        "use_new_terminal": true,
-        "allow_concurrent_runs": false,
-        "reveal": "no_focus",
-        "hide": "on_success"
-      },
-      {
-        "label": "Tailwind Watch",
-        "command": "tailwindcss -i input.css -o assets/tailwind.css -w",
-        "use_new_terminal": true,
-        "allow_concurrent_runs": false,
-        "reveal": "no_focus",
-        "hide": "on_success"
-      },
-    // ...
-1. Save and close the tasks file
+```json
+{
+  "label": "Dioxus Serve",
+  "command": "dx serve --platform desktop",
+  "use_new_terminal": true,
+  "allow_concurrent_runs": false,
+  "reveal": "no_focus",
+  "hide": "on_success"
+},
+{
+  "label": "Tailwind Watch",
+  "command": "tailwindcss -i input.css -o assets/tailwind.css -w",
+  "use_new_terminal": true,
+  "allow_concurrent_runs": false,
+  "reveal": "no_focus",
+  "hide": "on_success"
+},
+```
+2. Save and close the tasks file
 1. Alt-shift-T, `Tailwind Watch`
 1. Alt-shift-T, `Dioxus Serve`
