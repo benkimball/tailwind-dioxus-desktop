@@ -1,0 +1,21 @@
+// Static tasks configuration.
+//
+// Example:
+[
+  {
+    "label": "Dioxus Serve",
+    "command": "dx serve --platform desktop",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "hide": "on_success"
+  },
+  {
+    "label": "Tailwind Watch",
+    "command": "tailwindcss -i input.css -o assets/tailwind.css -w",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "hide": "on_success"
+  }
+]
